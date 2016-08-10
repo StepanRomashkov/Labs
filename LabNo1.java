@@ -5,8 +5,9 @@ import java.util.Scanner;
 public class LabNo1 {
 
 	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
 		while (true) {
-			Scanner scan = new Scanner(System.in);
 			System.out.println("Enter Length:");
 			float length = scan.nextFloat();
 			
@@ -27,11 +28,11 @@ public class LabNo1 {
 			scan.nextLine();
 			
 			String again = scan.nextLine();
-			if (!again.equals("y")) {
-				
+			
+			if (!again.equals("y"))	
 				break;
-			}
 		}
+		scan.close();
 	}
 
 }
