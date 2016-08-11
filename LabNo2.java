@@ -5,17 +5,17 @@ import java.util.Scanner;
 public class LabNo2 {
 
 	private static final String[] MAIN_STORY_CHOICES = {"west", "east", "north", "south"};
+	
+	private static Scanner scan = new Scanner(System.in);
 
 	private static String  makeChoice(String[] input) {
-		Scanner scan2 = new Scanner(System.in);
 		boolean correct = false;
 		String choice = "";
 		while (!correct) {
-			choice = scan2.nextLine();
+			choice = scan.nextLine();
 			for (int i = 0; i < input.length; i++) {
 				if (input[i].equals(choice)) {
 					correct = true;
-//					scan2.close();
 					return choice;
 				}
 			}
@@ -28,12 +28,10 @@ public class LabNo2 {
 						System.out.print(input[j] + ", ");
 				}
 		}
-	//	scan2.close();
 		return choice;
 	}
 		
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
 		String name = "";
 		boolean townVisited = false;
 		boolean islandVisited = false;
